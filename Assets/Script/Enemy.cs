@@ -21,4 +21,10 @@ public class Enemy : MonoBehaviour
         // 움직임을 반영.
         transform.Translate(0, -distanceY, 0);
     }
+
+    private void OnBeCameInvisible()
+    {
+        // 화면 밖으로 나가면 지움
+        Destroy(gameObject);
+    }
 }
